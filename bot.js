@@ -39,29 +39,7 @@ bot.on('message', message => {
 					});
 				}
 				});
-
 			}
-		switch (message.channel.id){
-		case '443856347205992448':
-		case '443856411143831552':
-			switch(message.author.id)
-			{
-				case '120630439378550786':
-					message.channel.send('Ah hello God');
-					break;
-				case '377576184395071488':
-					message.channel.send('DRAGON CHAN');
-					break;
-				case '214845257731407872':
-					message.channel.send('Fuck Off');
-					break;
-				default:
-					break;
-		}
-		break;
 	}
-});
-bot.on("guildMemberAdd", (member) => {
-	bot.channels.get('443856411143831552').send('oh hello dick');
 });
 bot.login(auth.token);
