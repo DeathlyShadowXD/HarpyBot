@@ -1,0 +1,13 @@
+{
+	"name": "harpy",
+	"version": "1.0.0",
+	"description": "Character Building",
+	"main": "DeathlyShadowXD",
+	"dependencies": {
+		"cheerio": "^1.0.0-rc.2",
+		"discord.js": "^11.4.2",
+		"mathjs": "^4.4.2",
+		"request": "^2.88.0",
+		"winston": "^2.4.4"
+	}
+}
