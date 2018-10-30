@@ -40,5 +40,5 @@ bot.on('message', message => {
 				}
 				});
 			}
-	}
+	});
 bot.login(auth.token);
