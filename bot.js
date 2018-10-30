@@ -23,9 +23,9 @@ bot.on('message', message => {
 			if (message.content === 'hitme')
 			{
 				var rand = math.randomInt(2,19809);
-			
+
 				var src;
-				logger.info('hitme'+' '+rand);	
+				logger.info('hitme'+' '+rand);
 				var pageToVisit = "http://herpy.nu/gallery/displayimage.php?pid=" + rand;
 				request(pageToVisit, function(error, response, body) {
 				if(response.statusCode === 200) {
@@ -64,21 +64,4 @@ bot.on('message', message => {
 bot.on("guildMemberAdd", (member) => {
 	bot.channels.get('443856411143831552').send('oh hello dick');
 });
-
-function crawl()
-{
-var pageToVisit = "http://herpy.nu/gallery/displayimage.php?pid=19806";
-request(pageToVisit, function(error, response, body) {
-	 if(response.statusCode === 200) {
-		var $ = cheerio.load(body);
-		$('img.image').each(function(i, element){
-			var a = $(this).attr("src");
-			logger.info(a);
-			return a;
-		});
-   }
-});
-}
-
-
 bot.login(auth.token);
