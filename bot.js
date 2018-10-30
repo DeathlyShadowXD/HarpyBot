@@ -44,6 +44,7 @@ bot.on('message', message => {
   		});
       break;
     case 'dankmemes':
+      logger.info('dankmemes');
       var pageToVisit = "https://www.reddit.com/r/dankmemes/new/";
       request(pageToVisit, function(error, response, body)
       {
@@ -60,6 +61,7 @@ bot.on('message', message => {
               message.channel.send({
                 files: [src]
               });
+              break;
           }
         });
         }
