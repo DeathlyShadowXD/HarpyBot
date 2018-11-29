@@ -54,6 +54,9 @@ bot.on('message', message => {
             }
           }
         }
+
+        logger.info(multiple + " " + numMultiple);
+        logger.info(die + " " + numDie);
         var numMultiple = parseInt(multiple, 10);
         var numDie = parseInt(die, 10);
 
