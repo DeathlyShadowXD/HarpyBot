@@ -54,8 +54,8 @@ bot.on('message', message => {
             }
           }
         }
-        var numMultiple = Integer.parseInt(multiple);
-        var numDie = Integer.parseInt(die);
+        var numMultiple = parseInt(multiple, 10);
+        var numDie = parseInt(die, 10);
 
         var rand = math.randomInt(1,numDie)*numMultiple;
         message.channel.send('dice roll: ' + rand);
