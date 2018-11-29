@@ -32,6 +32,7 @@ bot.on('message', message => {
           var dice;
           var mod;
 
+          var prevRand = 0;
           strDice = reDice.exec(content)
           if (strDice != null)
           {
@@ -46,7 +47,7 @@ bot.on('message', message => {
             for(var i = 0; i < maxI; i++)
             {
             	var rand = math.randomInt(1, dice);
-              var prevRand += rand;
+              prevRand += rand;
             }
             rand = prevRand;
             if (strMod != null)
