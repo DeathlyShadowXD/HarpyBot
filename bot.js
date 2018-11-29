@@ -44,10 +44,13 @@ bot.on('message', message => {
               var maxI = parseInt(numDice[1], 10);
             } else
               maxI = 1;
-            for(var i = 0; i < maxI; i++)
+            if (maxI < 255 && maxI > -255)
             {
-            	var rand = math.randomInt(1, dice);
-              prevRand += rand;
+              for(var i = 0; i < maxI; i++)
+              {
+              	var rand = math.randomInt(1, dice);
+                prevRand += rand;
+              }
             }
             rand = prevRand;
             if (strMod != null)
