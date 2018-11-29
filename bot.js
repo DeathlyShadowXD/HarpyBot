@@ -46,7 +46,9 @@ bot.on('message', message => {
             for(var i = 0; i < maxI; i++)
             {
             	var rand = math.randomInt(1, dice);
+              var prevRand += rand;
             }
+            rand = prevRand;
             if (strMod != null)
             {
               var str = strMod[0]
